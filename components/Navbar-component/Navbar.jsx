@@ -1,6 +1,8 @@
 'use client'
+
 import { useContext } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 //context data for this page
 import { MyContext } from '@/context/MyContext'
@@ -10,14 +12,16 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import BlackUserIcon from '../../public/assets/icons/black-user-icon.svg'
 import WhiteUserIcon from '../../public/assets/icons/white-user-icon.svg'
 import WhiteHiveIcon from '../../public/assets/icons/hive-white-icon.svg'
+import BlackHiveIcon from '../../public/assets/icons/hive-black-icon.svg'
 import WhiteQRIcon from '../../public/assets/icons/QR-white-icon.svg'
+import BlackQRIcon from '../../public/assets/icons/QR-black-icon.svg'
 import WhiteSearchIcon from '../../public/assets/icons/white-search-icon.svg'
+import BlackSearchIcon from '../../public/assets/icons/black-search-icon.svg'
 import WhiteMicrophoneIcon from '../../public/assets/icons/white-microphone-icon.svg'
-import BlackClubIcon from '../../public/assets/icons/black-club-icon.svg'
+import BlackMicrophoneIcon from '../../public/assets/icons/black-microphone-icon.svg'
 import DanelGoldImageLogo from '../../public/assets/images/DanelGold-logo-image.svg'
 import DanelGoldBlackTextImageLogo from '../../public/assets/images/DanelGold-logo-black-text-image.svg'
 import DanelGoldWhiteTextImageLogo from '../../public/assets/images/DanelGold-logo-white-text-image.svg'
-import DSCA from '../DSC-component/DSCA'
 
 function Navbar() {
   const { darkMode } = useContext(MyContext)
@@ -53,7 +57,7 @@ function Navbar() {
             }}
           >
             {darkMode && <Image src={WhiteHiveIcon} alt='WhiteHiveIcon' />}
-            {!darkMode && <Image src={BlackClubIcon} alt='BlackHiveIcon' />}
+            {!darkMode && <Image src={BlackHiveIcon} alt='BlackHiveIcon' />}
             {darkMode && (
               <p className='font-medium text-[15px] text-[#FFFFFF] ml-1'>
                 Hive
@@ -74,7 +78,7 @@ function Navbar() {
             }}
           >
             {darkMode && <Image src={WhiteQRIcon} alt='WhiteQRIcon' />}
-            {!darkMode && <Image src={BlackClubIcon} alt='BlackQRIcon' />}
+            {!darkMode && <Image src={BlackQRIcon} alt='BlackQRIcon' />}
             {darkMode && (
               <p className='font-medium text-[15px] text-[#FFFFFF] ml-1'>QR</p>
             )}
@@ -87,8 +91,8 @@ function Navbar() {
         {/* center-section (search-bar) */}
         <div className=''>
           <input
-            className='relative flex justify-center items-center w-[460px] h-[25px] bg-inherit rounded-[20px] dark:text-[#FFFFFF] p-5 placeholder:font-medium placeholder:text-[12px]
-              placeholder:dark:text-[#FFFFFF] placeholder:text-[#000000] placeholder:pl-3 border'
+            className='relative flex justify-center items-center w-[460px] h-[35px] bg-inherit rounded-[20px] dark:text-[#FFFFFF] pl-5 placeholder:font-medium placeholder:text-[13px]
+              placeholder:dark:text-[#FFFFFF] placeholder:text-[#000000] placeholder:pl-2 border'
             style={{
               boxShadow: '0px 0px 7px 4px rgba(0, 0, 0, 1)',
             }}
@@ -96,39 +100,50 @@ function Navbar() {
           />
 
           {/* search-icon-container */}
-          <div className='flex justify-center items-center w-[10px] h-[10px] absolute top-[30px] ml-[10px]'>
-            <Image src={WhiteSearchIcon} alt='WhiteSearchIcon' />
+          <div className='flex justify-center items-center w-[10px] h-[10px] absolute top-[30px] ml-[8px]'>
+            {darkMode && <Image src={WhiteSearchIcon} alt='WhiteSearchIcon' />}
+            {!darkMode && <Image src={BlackSearchIcon} alt='WhiteSearchIcon' />}
           </div>
           {/* microphone-button */}
-          <div className='flex justify-center items-center w-[10px] h-[10px] absolute top-[30px] ml-[440px]'>
-            <button>
-              <Image src={WhiteMicrophoneIcon} />
-            </button>
+          <div className='flex justify-center items-center w-[10px] h-[10px] absolute top-[30px] ml-[438px]'>
+            {darkMode && (
+              <button>
+                <Image src={WhiteMicrophoneIcon} />
+              </button>
+            )}
+            {!darkMode && (
+              <button>
+                <Image src={BlackMicrophoneIcon} />
+              </button>
+            )}
           </div>
         </div>
 
         {/* left-side of the navbar (danel gold logo)*/}
-        <div className='flex justify-center items-center'>
-          <Image src={DanelGoldImageLogo} alt='DanelGoldImageLogo' />
-          {darkMode && (
-            <Image
-              src={DanelGoldWhiteTextImageLogo}
-              className='ml-2'
-              alt='DanelGoldWhiteTextImageLogo'
-            />
-          )}
+        <Link href='/'>
+          <div className='flex justify-center items-center'>
+            <Image src={DanelGoldImageLogo} alt='DanelGoldImageLogo' />
+            {darkMode && (
+              <Image
+                src={DanelGoldWhiteTextImageLogo}
+                className='ml-2'
+                alt='DanelGoldWhiteTextImageLogo'
+              />
+            )}
 
-          {!darkMode && (
-            <Image
-              src={DanelGoldBlackTextImageLogo}
-              className='ml-2'
-              alt='DanelGoldBlackTextImageLogo'
-            />
-          )}
-        </div>
+            {!darkMode && (
+              <Image
+                src={DanelGoldBlackTextImageLogo}
+                className='ml-2'
+                alt='DanelGoldBlackTextImageLogo'
+              />
+            )}
+          </div>
+        </Link>
       </nav>
     </div>
   )
 }
 
 export default Navbar
+

@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react'
+//import { useEffect, useState } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 
 //carousel slide data
-import { LandingHeroCarouselImages } from '../../constants/landing-hero-carousel-images'
+import { LandingHeroCarouselImages } from '../../constants/landing-hero-carousel-images/landing-hero-carousel-images'
 
 function LandingHeroCarousel() {
+  const [emblaRef] = useEmblaCarousel()
+
   return (
-    <div id='Landing-Hero-Carousel-fully-container'>
-      {/* carousel-container */}
-      <div className='flex justify-center items-center mt-10 '>
-        {/* carousel-slides */}
-        <div className='flex justify-center items-center max-w-[430px] max-h-[430px] rounded-[10px] gap-5'>
+    <div className='embla' ref={emblaRef}>
+      <div className='embla__container flex justify-center items-center'>
+        <div className=' flex justify-center items-center max-w-[430px] max-h-[430px] rounded-[10px] gap-5 mt-5 cursor-pointer'>
           {LandingHeroCarouselImages.map((slide) => (
             <Image
               key={slide.id}

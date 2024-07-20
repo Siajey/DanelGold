@@ -29,8 +29,8 @@ function Footer() {
         <div className='flex justify-between items-center w-full p-[30px]'>
           {/* left-side logo-container */}
           <div className='flex justify-center items-center'>
-            <Image src={DanelGoldTextLogo} />
             <Image src={DanelGoldYellowLogo} />
+            <Image src={DanelGoldTextLogo} className='ml-2' />
           </div>
 
           {/* right-side of the top container */}

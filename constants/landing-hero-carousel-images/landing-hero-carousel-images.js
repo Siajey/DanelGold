@@ -28,7 +28,3 @@ export const LandingHeroCarouselImages = [
     height: 430,
   },
 ]
-
-
-
-

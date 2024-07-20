@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 //assets for this component
 import SunLightIcon from '../../public/assets/icons/white-sun-icon-dark-and-light-mood.svg'
-import SunDarkIcon from '../../public/assets/icons/black-sun-icon-dark-and-light-mood.svg'
 import BlackMoonIcon from '../../public/assets/icons/black-moon-icon-dark-and-light-mood.svg'
 
 function ThemeToggle() {
@@ -55,11 +54,11 @@ function ThemeToggle() {
           className={
             darkMode
               ? ''
-              : 'flex justify-center items-center w-[28px] h-[24px] rounded-[10px] bg-[#FFFFFF] transform transition-transform duration-600'
+              : 'flex justify-center items-center w-[28px] h-[24px] rounded-[10px] bg-[#000000] transform transition-transform duration-600'
           }
         >
           {darkMode && <Image src={SunLightIcon} />}
-          {!darkMode && <Image src={SunDarkIcon} />}
+          {!darkMode && <Image src={SunLightIcon} />}
         </div>
       </button>
     </div>
@@ -67,3 +66,4 @@ function ThemeToggle() {
 }
 
 export default ThemeToggle
+

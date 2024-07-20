@@ -10,28 +10,28 @@ function DSCA() {
       <div className='flex justify-center items-center'>
         <div className='flex justify-center items-center gap-10'>
           <button>
-            <Link href='/Drops'>
+            <Link href='/drops'>
               <p className='font-semibold text-[15px] text-[#000000] dark:text-[#FFFFFF]'>
                 Drops
               </p>
             </Link>
           </button>
           <button>
-            <Link href='/Stats'>
+            <Link href='/stats'>
               <p className='font-semibold text-[15px] text-[#000000] dark:text-[#FFFFFF]'>
                 Stats
               </p>
             </Link>
           </button>
           <button>
-            <Link href='/Create'>
+            <Link href='/create'>
               <p className='font-semibold text-[15px] text-[#000000] dark:text-[#FFFFFF]'>
                 Create
               </p>
             </Link>
           </button>
           <button>
-            <Link href='Auction'>
+            <Link href='auction'>
               <p className='font-semibold text-[15px] text-[#000000] dark:text-[#FFFFFF]'>
                 Auction
               </p>
