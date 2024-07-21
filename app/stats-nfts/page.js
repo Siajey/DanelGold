@@ -103,7 +103,7 @@ function page() {
               <input
                 className='relative flex justify-center items-center w-[76vw] h-[40px] bg-[#878585] rounded-[10px] pl-8 placeholder:font-semibold placeholder:text-[12px] placeholder:text-[#000000]'
                 style={{}}
-                placeholder='Search by collection'
+                placeholder='Search by NFTS'
               />
 
               <div className='absolute top-[267px] ml-3'>
@@ -142,58 +142,73 @@ function page() {
         </div>
       </div>
 
-      {/* NFT-cards-section */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ml-24 mt-7'>
-        {StatsNFTCardsData.map((card) => (
-          <div className=''>
-            <div
-              key={card.id}
-              className='flex flex-col justify-center items-center w-[350px] h-[423px] bg-[#474747] cursor-pointer mt-7'
-            >
-              {/* card-image */}
-              <div>
-                <Image src={card.NFTCardImage} width={350} height={300} />
-              </div>
-              {/* Name of the art section */}
-              <div className='mt-1'>
-                <p className='font-semibold text-[20px] text-[#FFFFFF] leading-[25px]'>
-                  {card.NFTCardName}
-                </p>
-              </div>
+      {/* NFT-cards-section & BPT (blockChain-Price-Type) */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '10vw 90vw',
+        }}
+      >
+        {/* BPT-section-container */}
+        <div className='flex flex-col justify-center items-center w-[245px] h-[400px] bg-blue-300 mt-12'>
+        {/* test- */}
 
-              <div className='flex flex-col justify-start items-start w-[340px] mt-1 ml-1'>
-                {/* artist-name */}
-                <div className='flex justify-center items-center'>
-                  <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
-                    {card.NFTArtistName}
+        </div>
+
+        {/* cards-section */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ml-24 mt-7'>
+          {StatsNFTCardsData.map((card) => (
+            <div className=''>
+              <div
+                key={card.id}
+                className='flex flex-col justify-center items-center w-[350px] h-[423px] bg-[#474747] cursor-pointer mt-7'
+              >
+                {/* card-image */}
+                <div>
+                  <Image src={card.NFTCardImage} width={350} height={300} />
+                </div>
+                {/* Name of the art section */}
+                <div className='mt-1'>
+                  <p className='font-semibold text-[20px] text-[#FFFFFF] leading-[25px]'>
+                    {card.NFTCardName}
                   </p>
-                  <div className='ml-2'>
-                    <Image src={card.NFTIcon} width={15} height={15} />
+                </div>
+
+                <div className='flex flex-col justify-start items-start w-[340px] mt-1 ml-1'>
+                  {/* artist-name */}
+                  <div className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      {card.NFTArtistName}
+                    </p>
+                    <div className='ml-2'>
+                      <Image src={card.NFTIcon} width={15} height={15} />
+                    </div>
+                  </div>
+                  {/* collection-name */}
+                  <div>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      {card.NFTCollectionName}
+                    </p>
                   </div>
                 </div>
-                {/* collection-name */}
-                <div>
-                  <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
-                    {card.NFTCollectionName}
-                  </p>
-                </div>
-              </div>
 
-              {/* price */}
-              <div className='flex justify-end items-end w-[340px] mb-3'>
-                <div className='flex justify-center items-center w-[60px] h-[15px] bg-[#D9D9D9]'>
-                  <p className='font-semibold text-[10px] text-[#000000] leading-[12px]'>
-                    {card.NFTCardPrice}
-                  </p>
+                {/* price */}
+                <div className='flex justify-end items-end w-[340px] mb-3'>
+                  <div className='flex justify-center items-center w-[60px] h-[15px] bg-[#D9D9D9]'>
+                    <p className='font-semibold text-[10px] text-[#000000] leading-[12px]'>
+                      {card.NFTCardPrice}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
 export default page
+
 

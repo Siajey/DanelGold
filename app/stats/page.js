@@ -13,7 +13,6 @@ import { StatsHeadingPaginationLinks } from '../../constants/stats-heading-pagin
 
 //assets for this page
 import BlackLargeSearchIcon from '../../public/assets/icons/black-large-search-bar-icon.svg'
-import WhiteLargeSearchIcon from '../../public/assets/icons/white-large-search-bar-icon.svg'
 import BlackBurgerMenuIcon from '../../public/assets/icons/black-burger-menu-icon.svg'
 
 import StatsCollectionsPageListComponent from '@/components/StatsCollectionsPageListComponent/StatsCollectionsPageListComponent'
@@ -125,10 +124,11 @@ function page() {
 
       {/* list-component for this page */}
       <div>
-        <StatsCollectionsPageListComponent/>
+        <StatsCollectionsPageListComponent />
       </div>
     </div>
   )
 }
 
 export default page
+

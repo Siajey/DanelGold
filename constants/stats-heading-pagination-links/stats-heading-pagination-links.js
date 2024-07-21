@@ -20,6 +20,6 @@ export const StatsHeadingPaginationLinks = [
   {
     id: 1,
     navName: 'Users',
-    href: '/users',
+    href: '/stats-users',
   },
 ]

@@ -61,27 +61,27 @@ export const FooterMagazineLinks = [
   {
     id: 1,
     LinkName: 'What is an NFT?',
-    LinkHref: '/',
+    LinkHref: '/magazines',
   },
   {
     id: 2,
     LinkName: 'How to buy an NFT?',
-    LinkHref: '/',
+    LinkHref: '/magazines',
   },
   {
     id: 3,
     LinkName: 'What are NFT drops?',
-    LinkHref: '/',
+    LinkHref: '/magazines',
   },
   {
     id: 4,
     LinkName: 'What is a blockchain?',
-    LinkHref: '/',
+    LinkHref: '/magazines',
   },
   {
     id: 5,
     LinkName: 'What is web3?',
-    LinkHref: '/',
+    LinkHref: '/magazines',
   },
 ]
 

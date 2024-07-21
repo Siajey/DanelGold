@@ -8,6 +8,7 @@ import '../../styles/TopGalleriesSliderCardsCssCodes/TopGalleriesSliderCardsCssC
 
 //slides data for this page
 import { MagazineSlidesData } from '../../constants/magazine-slides-data/magazine-slides-data.js'
+import Link from 'next/link'
 
 export default function EmblaCarouselMagazineLargeSliderCardsCarouselComponent() {
   const [emblaRef] = useEmblaCarousel()
@@ -18,18 +19,20 @@ export default function EmblaCarouselMagazineLargeSliderCardsCarouselComponent()
         {MagazineSlidesData.map((slide) => {
           return (
             <div className='embla_slide cursor-pointer'>
-              <div className='flex flex-col justify-center items-center w-[650px] h-[350px] bg-[#474747] overflow-hidden'>
-                {/* card-image */}
-                <div className='w-full h-[300px] overflow-hidden'>
-                  <Image src={slide.CardImage} width={650} height={300} />
+              <Link href='/magazines'>
+                <div className='flex flex-col justify-center items-center w-[650px] h-[350px] bg-[#474747] overflow-hidden'>
+                  {/* card-image */}
+                  <div className='w-full h-[300px] overflow-hidden'>
+                    <Image src={slide.CardImage} width={650} height={300} />
+                  </div>
+                  {/* description-text */}
+                  <div className='mt-10 mb-2'>
+                    <p className='font-bold text-[20px] text-[#FFFFFF] leading-[25px]'>
+                      {slide.CardDescription}
+                    </p>
+                  </div>
                 </div>
-                {/* description-text */}
-                <div className='mt-10'>
-                  <p className='font-bold text-[20px] text-[#FFFFFF] leading-[25px]'>
-                    {slide.CardDescription}
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
           )
         })}
@@ -37,3 +40,5 @@ export default function EmblaCarouselMagazineLargeSliderCardsCarouselComponent()
     </div>
   )
 }
+
+
