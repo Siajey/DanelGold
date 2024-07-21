@@ -17,7 +17,7 @@ function DSCA() {
             </Link>
           </button>
           <button>
-            <Link href='/stats'>
+            <Link href='/stats-collections'>
               <p className='font-semibold text-[15px] text-[#000000] dark:text-[#FFFFFF]'>
                 Stats
               </p>

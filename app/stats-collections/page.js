@@ -48,7 +48,7 @@ function page() {
                     <div
                       className={
                         pathname === paginationLink.href
-                          ? 'flex justify-center items-center w-[102px] h-[40px] bg-[#4d4d4d] rounded-[10px]'
+                          ? 'flex justify-center items-center p-2 h-[40px] bg-[#b5b4b4] rounded-[10px]'
                           : ''
                       }
                     >
@@ -77,7 +77,7 @@ function page() {
                 placeholder='Search by collection'
               />
 
-              <div className='absolute top-[253px] ml-3'>
+              <div className='absolute top-[268px] ml-3'>
                 <Image src={BlackLargeSearchIcon} />
               </div>
             </div>

@@ -61,7 +61,7 @@ export const FooterMagazineLinks = [
   {
     id: 1,
     LinkName: 'What is an NFT?',
-    LinkHref: '/magazines',
+    LinkHref: '/what-is-an-nft',
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ export const FooterCategoriesLinks = [
   {
     id: 3,
     LinkName: 'Collections',
-    LinkHref: '/',
+    LinkHref: '/collections',
   },
 ]
 

@@ -2,13 +2,13 @@ export const StatsHeadingPaginationLinks = [
   {
     id: 1,
     navName: 'Collections',
-    href: '/collections',
+    href: '/stats-collections',
   },
 
   {
     id: 2,
     navName: 'Marketplaces',
-    href: '/marketplaces',
+    href: '/stats-marketplaces',
   },
 
   {

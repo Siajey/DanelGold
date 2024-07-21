@@ -150,9 +150,9 @@ function page() {
         }}
       >
         {/* BPT-section-container */}
-        <div className='flex flex-col justify-center items-center w-[245px] h-[400px] bg-blue-300 mt-12'>
-        {/* test- */}
-
+        <div className='flex flex-col justify-center items-center w-[245px] h-[400px] bg-white mt-12 ml-5'>
+          {/* test- */}
+          accordions section
         </div>
 
         {/* cards-section */}
