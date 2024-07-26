@@ -28,10 +28,12 @@ function Footer() {
         {/* top-section of the footer container */}
         <div className='flex justify-between items-center w-full p-[30px]'>
           {/* left-side logo-container */}
-          <div className='flex justify-center items-center'>
-            <Image src={DanelGoldYellowLogo} />
-            <Image src={DanelGoldTextLogo} className='ml-2' />
-          </div>
+          <Link href='/'>
+            <div className='flex justify-center items-center'>
+              <Image src={DanelGoldYellowLogo} />
+              <Image src={DanelGoldTextLogo} className='ml-2' />
+            </div>
+          </Link>
 
           {/* right-side of the top container */}
           <div className='flex flex-col justify-center items-center'>
@@ -187,3 +189,6 @@ function Footer() {
 }
 
 export default Footer
+
+
+
