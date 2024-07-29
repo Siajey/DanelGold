@@ -47,8 +47,11 @@ function Navbar() {
     } else return null
   }
 
+  //helper function to calculate the width and height of the my device
+  /* alert(window.outerWidth+' x '+window.outerHeight); */
+
   return (
-    <div id='Navbar-component-fully-container'>
+    <div id='Navbar-component-fully-container' className=''>
       <nav
         id='Navbar-component-inside-section-container'
         className='flex flex-row-reverse justify-between items-center mt-3 mr-5 ml-5'
@@ -302,3 +305,5 @@ function Navbar() {
 }
 
 export default Navbar
+
+

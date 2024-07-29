@@ -1,0 +1,19 @@
+/* components/HexagonImage.module.css */
+.hexagonContainer {
+  width: 217px;
+  height: 178px;
+  overflow: hidden;
+}
+
+.hexagon {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
