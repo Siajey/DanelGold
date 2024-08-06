@@ -3,19 +3,23 @@
 
 import axios from "axios";
 import {useRouter} from "next/navigation";
-import Cookies from 'js-cookie'
+import {GetError} from "@/lib/errorHandling";
 
 export default function Login() {
     const router = useRouter()
     const send = async () => {
         const username = document.getElementById('username')
         const pass = document.getElementById('password')
-        const res = await axios.post('http://localhost:8080/admin/login', {
-            username: username.value,
-            password: pass.value
-        })
-        Cookies.set('token', res.data.token, {expires: 1})
-        router.push('/admin/dashboard')
+        try {
+            const res = await axios.post('http://localhost:8080/admin/login', {
+                username: username.value,
+                password: pass.value
+            })
+            localStorage.setItem('token', res.data.token)
+            router.push('/admin/dashboard')
+        } catch (e) {
+            console.log(GetError(e))
+        }
     }
 
     const onEnter = async (e) => {

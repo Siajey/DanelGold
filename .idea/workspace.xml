@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="fixed navigation and context value preservation">
+    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="feat removed unnecessary TokenContext">
+      <change afterPath="$PROJECT_DIR$/lib/errorHandling.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Admin/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Admin/dashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Admin/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Admin/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
       <workItem from="1722277297645" duration="961000" />
       <workItem from="1722930528570" duration="42000" />
       <workItem from="1722930580789" duration="37000" />
-      <workItem from="1722930622153" duration="13145000" />
+      <workItem from="1722930622153" duration="14910000" />
     </task>
     <task id="LOCAL-00001" summary="feat finished LoginByMetamask">
       <option name="closed" value="true" />
@@ -192,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722943680027</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat removed unnecessary TokenContext">
+      <option name="closed" value="true" />
+      <created>1722944629220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722944629220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +236,7 @@
     <MESSAGE value="feat fixed button onEnter" />
     <MESSAGE value="feat added placeholder admin dashboard" />
     <MESSAGE value="fixed navigation and context value preservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed navigation and context value preservation" />
+    <MESSAGE value="feat removed unnecessary TokenContext" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat removed unnecessary TokenContext" />
   </component>
 </project>
