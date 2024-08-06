@@ -4,10 +4,11 @@
 import axios from "axios";
 import {useContext} from "react";
 import {TokenContext} from "@/app/layout";
+import {useRouter} from "next/navigation";
 
 export default function Login() {
     const [token, setToken] = useContext(TokenContext)
-
+    const router = useRouter()
     const send = async () => {
         const username = document.getElementById('username')
         const pass = document.getElementById('password')
@@ -16,7 +17,7 @@ export default function Login() {
             password: pass.value
         })
         setToken(res.data.token)
-        window.location.href = 'http://localhost:3000/admin/dashboard'
+        router.push('/admin/dashboard')
     }
 
     const onEnter = async (e) => {

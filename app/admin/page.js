@@ -1,3 +1,5 @@
+'use client'
+
 import Login from '@/components/Admin/login'
 
 function page() {
