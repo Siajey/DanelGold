@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="feat finished LoginByMetamask">
-      <change afterPath="$PROJECT_DIR$/app/(user-app)/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/collections/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/collections/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/drops/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/drops/page.js" afterDir="false" />
+    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="fixed rootlayout">
+      <change afterPath="$PROJECT_DIR$/components/Admin/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/magazines/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/magazines/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/stats-collections/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/stats-collections/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/stats-marketplaces/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/stats-marketplaces/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/stats-nfts/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/stats-nfts/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/stats-users/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/stats-users/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/what-is-an-nft/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/what-is-an-nft/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,6 +73,7 @@
     "git-widget-placeholder": "feature/admin",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "H:/lexa/DanelGold",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -85,7 +83,7 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
+    "npm.dev.executor": "Debug",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
@@ -94,8 +92,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\lexa\DanelGold\app" />
       <recent name="H:\lexa\DanelGold\app\(user-app)" />
+      <recent name="H:\lexa\DanelGold\app" />
       <recent name="H:\lexa\DanelGold\app\user-app" />
     </key>
   </component>
@@ -137,7 +135,7 @@
       <workItem from="1722277297645" duration="961000" />
       <workItem from="1722930528570" duration="42000" />
       <workItem from="1722930580789" duration="37000" />
-      <workItem from="1722930622153" duration="805000" />
+      <workItem from="1722930622153" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="feat finished LoginByMetamask">
       <option name="closed" value="true" />
@@ -147,7 +145,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722263784041</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed rootlayout">
+      <option name="closed" value="true" />
+      <created>1722931679653</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722931679653</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed rootlayout">
+      <option name="closed" value="true" />
+      <created>1722931685447</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722931685447</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +194,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat finished LoginByMetamask" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat finished LoginByMetamask" />
+    <MESSAGE value="fixed rootlayout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed rootlayout" />
   </component>
 </project>
