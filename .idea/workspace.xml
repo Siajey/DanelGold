@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="fixed rootlayout">
-      <change afterPath="$PROJECT_DIR$/components/Admin/login.jsx" afterDir="false" />
+    <list default="true" id="a92064f8-8d44-40d1-85a3-cacb7994fe05" name="Changes" comment="feat added login request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(user-app)/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(user-app)/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Admin/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Admin/login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,7 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Debug",
+    "npm.dev.executor": "Run",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
@@ -135,7 +132,7 @@
       <workItem from="1722277297645" duration="961000" />
       <workItem from="1722930528570" duration="42000" />
       <workItem from="1722930580789" duration="37000" />
-      <workItem from="1722930622153" duration="4417000" />
+      <workItem from="1722930622153" duration="9490000" />
     </task>
     <task id="LOCAL-00001" summary="feat finished LoginByMetamask">
       <option name="closed" value="true" />
@@ -161,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722931685447</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat added login request">
+      <option name="closed" value="true" />
+      <created>1722935263020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722935263020</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +200,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="feat finished LoginByMetamask" />
     <MESSAGE value="fixed rootlayout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed rootlayout" />
+    <MESSAGE value="feat added login request" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat added login request" />
   </component>
 </project>
