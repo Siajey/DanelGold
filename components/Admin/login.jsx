@@ -2,12 +2,10 @@
 
 
 import axios from "axios";
-import {useContext} from "react";
-import {TokenContext} from "@/app/layout";
 import {useRouter} from "next/navigation";
+import Cookies from 'js-cookie'
 
 export default function Login() {
-    const [token, setToken] = useContext(TokenContext)
     const router = useRouter()
     const send = async () => {
         const username = document.getElementById('username')
@@ -16,7 +14,7 @@ export default function Login() {
             username: username.value,
             password: pass.value
         })
-        setToken(res.data.token)
+        Cookies.set('token', res.data.token, {expires: 1})
         router.push('/admin/dashboard')
     }
 

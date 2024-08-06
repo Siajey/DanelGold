@@ -12,6 +12,7 @@
     "axios": "^1.7.3",
     "embla-carousel-autoplay": "^8.1.7",
     "embla-carousel-react": "^8.1.6",
+    "js-cookie": "^3.0.5",
     "next": "14.2.3",
     "next-theme": "^0.1.5",
     "react": "^18",
