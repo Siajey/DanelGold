@@ -19,6 +19,7 @@ export default function Login() {
             router.push('/admin/dashboard')
         } catch (e) {
             console.log(GetError(e))
+            alert(GetError(e))
         }
     }
 
@@ -34,6 +35,6 @@ export default function Login() {
         <label htmlFor={'password'} className={'text-white mt-2'}>Password</label>
         <input onKeyDown={onEnter} id={'password'} name={'password'} type={'password'} className={'p-1 mt-1 rounded'}/>
         <input onClick={send} onKeyDown={onEnter} type={'button'} value={'Submit'}
-               className={'bg-sky-500 rounded p-1 mt-4 w-1/4 text-white'}/>
+               className={'bg-sky-500 rounded p-2 mt-4 w-1/4 text-white min-w-min'}/>
     </div>
 }
