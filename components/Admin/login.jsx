@@ -16,6 +16,7 @@ export default function Login() {
             password: pass.value
         })
         setToken(res.data.token)
+        window.location.href = 'http://localhost:3000/admin/dashboard'
     }
 
     const onEnter = async (e) => {
