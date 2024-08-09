@@ -9,23 +9,20 @@ import Image from 'next/image'
 import DSCA from '@/components/DSCA-component/DSCA'
 
 //pagination links data for this page (collections-marketplaces-nfts-users)
-import { StatsHeadingPaginationLinks } from '../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
+import { StatsHeadingPaginationLinks } from '../../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
 
 //assets for this page
-import BlackLargeSearchIcon from '../../public/assets/icons/black-large-search-bar-icon.svg'
-import BlackBurgerMenuIcon from '../../public/assets/icons/black-burger-menu-icon.svg'
+import BlackLargeSearchIcon from '../../../public/assets/icons/black-large-search-bar-icon.svg'
+import BlackBurgerMenuIcon from '../../../public/assets/icons/black-burger-menu-icon.svg'
 
 import StatsCollectionsPageListComponent from '@/components/StatsCollectionsPageListComponent/StatsCollectionsPageListComponent'
-
-// (TODO: this page need a different table list of data than the StatsCollectionsPage - API fetching data for the table should be done in future)
-// (TODO: pagination should implement in future)
 
 function page() {
   //active links controller using pathname hook
   const pathname = usePathname()
 
   return (
-    <div id='Stats-Marketplaces-fully-container'>
+    <div id='Stats-fully-container'>
       {/* heading-text-container and DSCA component */}
       <div className='flex justify-between items-center mt-10'>
         <div className='ml-5'>
@@ -77,7 +74,7 @@ function page() {
               <input
                 className='relative flex justify-center items-center w-[81vw] h-[40px] bg-[#878585] rounded-[10px] pl-8 placeholder:font-semibold placeholder:text-[12px] placeholder:text-[#000000]'
                 style={{}}
-                placeholder='Search by marketplaces'
+                placeholder='Search by collection'
               />
 
               <div className='absolute top-[268px] ml-3'>
@@ -96,9 +93,11 @@ function page() {
 
             <div className='flex justify-center items-center w-[185px] h-[40px] bg-[#878585] rounded-[10px] gap-5'>
               <button>
-                <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
-                  1h
-                </p>
+                <div className='flex justify-center items-center w-[40px] h-[30px] bg-[#FFFFFF] rounded-[10px]'>
+                  <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
+                    1h
+                  </p>
+                </div>
               </button>
 
               <button>
@@ -114,11 +113,9 @@ function page() {
               </button>
 
               <button>
-                <div className='flex justify-center items-center w-[40px] h-[30px] bg-[#FFFFFF] rounded-[10px]'>
-                  <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
-                    30d
-                  </p>
-                </div>
+                <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
+                  30d
+                </p>
               </button>
             </div>
           </div>
@@ -134,6 +131,4 @@ function page() {
 }
 
 export default page
-
-
 

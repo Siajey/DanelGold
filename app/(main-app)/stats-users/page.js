@@ -6,20 +6,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 //css codes needed for this page
-import '../../styles/StatsUsersPageCssCodes/StatsUsersPageCssCodes.css'
+import '../../../styles/StatsUsersPageCssCodes/StatsUsersPageCssCodes.css'
 
 //components for this page
 import DSCA from '@/components/DSCA-component/DSCA'
 
 //pagination links data for this page (collections-marketplaces-nfts-users)
-import { StatsHeadingPaginationLinks } from '../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
+import { StatsHeadingPaginationLinks } from '../../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
 
 //assets for this page
-import BlackPlusFollowIcon from '../../public/assets/icons/black-plus-follow-icon.svg'
-import BlackLargeSearchIcon from '../../public/assets/icons/black-large-search-bar-icon.svg'
+import BlackPlusFollowIcon from '../../../public/assets/icons/black-plus-follow-icon.svg'
+import BlackLargeSearchIcon from '../../../public/assets/icons/black-large-search-bar-icon.svg'
 
 //users cards data
-import { StatsUsersCardsData } from '../../constants/stat-users-cards-data/stat-users-cards-data.js'
+import { StatsUsersCardsData } from '../../../constants/stat-users-cards-data/stat-users-cards-data.js'
 
 function page() {
   //active links controller using pathname hook

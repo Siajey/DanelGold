@@ -5,8 +5,8 @@ import Image from 'next/image'
 import DSCA from '@/components/DSCA-component/DSCA'
 
 //assets for this page
-import FancyDanelGoldTextImage from '../../public/assets/images/magazines-page-danel-gold-fancy-text.svg'
-import LargeMonkeyImage from '../../public/assets/images/magazines-main-page-large-image-1.svg'
+import FancyDanelGoldTextImage from '../../../public/assets/images/magazines-page-danel-gold-fancy-text.svg'
+import LargeMonkeyImage from '../../../public/assets/images/magazines-main-page-large-image-1.svg'
 
 function page() {
   return (

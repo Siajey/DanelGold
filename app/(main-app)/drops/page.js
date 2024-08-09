@@ -8,16 +8,16 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
 //css codes for the Large carousel
-import '../../styles/DropsPageCssCodes/DropsPageCssCodes.css'
+import '../../../styles/DropsPageCssCodes/DropsPageCssCodes.css'
 
 //components for this page
 import DSCA from '@/components/DSCA-component/DSCA'
-import {DropsCardsData} from '../../constants/drops-page-cards-data/drops-page-cards-data.js'
+import {DropsCardsData} from '../../../constants/drops-page-cards-data/drops-page-cards-data.js'
 
 //assets for this page
-import LargeCarouselImage from '../../public/assets/images/Drops-page-large-carousel-image.svg'
-import LargeCarouselArrowRightIcon from '../../public/assets/icons/Drops-large-carousel-white-arrow-right-icon.svg'
-import LargeCarouselArrowLeftIcon from '../../public/assets/icons/Drops-large-carousel-white-arrow-left-icon.svg'
+import LargeCarouselImage from '../../../public/assets/images/Drops-page-large-carousel-image.svg'
+import LargeCarouselArrowRightIcon from '../../../public/assets/icons/Drops-large-carousel-white-arrow-right-icon.svg'
+import LargeCarouselArrowLeftIcon from '../../../public/assets/icons/Drops-large-carousel-white-arrow-left-icon.svg'
 
 //this page carousel need to be dynamically loaded from api (carousel-data-api)
 

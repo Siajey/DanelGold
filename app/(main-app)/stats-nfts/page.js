@@ -7,21 +7,21 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import '../../styles/StatsNFTSPageCssCodes/StatsNFTSPageCssCodes.css'
+import '../../../styles/StatsNFTSPageCssCodes/StatsNFTSPageCssCodes.css'
 
 //components for this page
 import DSCA from '@/components/DSCA-component/DSCA'
 
 //pagination links data for this page (collections-marketplaces-nfts-users)
-import { StatsHeadingPaginationLinks } from '../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
+import { StatsHeadingPaginationLinks } from '../../../constants/stats-heading-pagination-links/stats-heading-pagination-links'
 
 //assets for this page
-import BlackLargeSearchIcon from '../../public/assets/icons/black-large-search-bar-icon.svg'
-import BlackBurgerMenuIcon from '../../public/assets/icons/black-burger-menu-icon.svg'
-import BlackFlukeIcon from '../../public/assets/icons/black-fluke-icon.svg'
+import BlackLargeSearchIcon from '../../../public/assets/icons/black-large-search-bar-icon.svg'
+import BlackBurgerMenuIcon from '../../../public/assets/icons/black-burger-menu-icon.svg'
+import BlackFlukeIcon from '../../../public/assets/icons/black-fluke-icon.svg'
 
 //NFT cards data
-import { StatsNFTCardsData } from '../../constants/stats-nft-cards-data/stats-nft-cards-data.js'
+import { StatsNFTCardsData } from '../../../constants/stats-nft-cards-data/stats-nft-cards-data.js'
 
 function page() {
   //active links controller using pathname hook

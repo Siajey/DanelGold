@@ -7,13 +7,13 @@ import Link from 'next/link'
 import DSCA from '@/components/DSCA-component/DSCA'
 
 //pagination link data for this page
-import { MagazinesMainPageLinksData } from '../../constants/magazines-main-page-links-data/magazines-main-page-links-data.js'
+import { MagazinesMainPageLinksData } from '../../../constants/magazines-main-page-links-data/magazines-main-page-links-data.js'
 
 //assets for this page
-import FancyDanelGoldTextImage from '../../public/assets/images/magazines-page-danel-gold-fancy-text.svg'
-import LargeMonkeyImage from '../../public/assets/images/magazines-main-page-large-image-1.svg'
-import LargePersonNftImage from '../../public/assets/images/magazines-main-page-large-image-2.svg'
-import LargeNftImage from '../../public/assets/images/magazines-main-page-large-image-3.svg'
+import FancyDanelGoldTextImage from '../../../public/assets/images/magazines-page-danel-gold-fancy-text.svg'
+import LargeMonkeyImage from '../../../public/assets/images/magazines-main-page-large-image-1.svg'
+import LargePersonNftImage from '../../../public/assets/images/magazines-main-page-large-image-2.svg'
+import LargeNftImage from '../../../public/assets/images/magazines-main-page-large-image-3.svg'
 
 function page() {
   return (
