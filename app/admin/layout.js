@@ -1,16 +1,4 @@
-import {Inter} from 'next/font/google'
-import './globals.css'
-
-//navbar and footer layout
-
-//context data import
-
-const inter = Inter({subsets: ['latin']})
-
-export const metadata = {
-    title: 'Danel Gold Web Application',
-    description: 'NFT application',
-}
+import '../globals.css'
 
 export default function RootLayout({children}) {
     return (
@@ -28,7 +16,7 @@ export default function RootLayout({children}) {
                 crossOrigin="anonymous"
             />
         </head>
-        <body className={`${inter.className} dark:bg-[#000000]`}>
+        <body>
         {children}
         </body>
         </html>
