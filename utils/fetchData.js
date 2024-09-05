@@ -12,7 +12,7 @@ const fetchData=async(url,option={})=>{
 
 // useEffect(()=>{
 //     (async()=>{
-//         const res=await fetch('users')
+//         const res=await fetchData('users')
 //     })()
 // },[])
 
