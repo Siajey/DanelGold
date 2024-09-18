@@ -20,7 +20,6 @@ import LargeCarouselArrowRightIcon from '../../public/assets/icons/Drops-large-c
 import LargeCarouselArrowLeftIcon from '../../public/assets/icons/Drops-large-carousel-white-arrow-left-icon.svg'
 
 //this page carousel need to be dynamically loaded from api (carousel-data-api)
-
 function page() {
   //handling the carousel different properties
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: 'false' }, [
@@ -142,3 +141,4 @@ function page() {
 }
 
 export default page
+

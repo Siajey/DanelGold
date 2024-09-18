@@ -17,7 +17,7 @@ function Footer() {
   return (
     <div id='Footer-component-fully-container' className=''>
       <div
-        className='w-full h-[465px] bg-[#474747] mt-20'
+        className='w-full h-[490px] bg-[#474747] mt-20'
         style={{
           borderTopRightRadius: '40px',
           borderTopLeftRadius: '40px',

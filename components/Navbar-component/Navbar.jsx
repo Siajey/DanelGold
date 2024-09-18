@@ -64,7 +64,7 @@ function Navbar() {
           {/* user-profile-drop-down-section fully container */}
           <div className='relative'>
             <button
-              className='flex justify-center items-center w-[35px] h-[30px] border-[1px] border-[#FFFFFF] rounded-[10px]'
+              className='flex justify-center items-center w-[35px] h-[30px] border-[1px] border-[#000000] dark:border-[#FFFFFF] rounded-[10px]'
               style={{
                 boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
               }}
@@ -121,7 +121,7 @@ function Navbar() {
 
           {/* Hive-section */}
           <div
-            className='flex justify-center items-center w-[71px] h-[30px] border-[1px] border-[#FFFFFF] rounded-[10px]'
+            className='flex justify-center items-center w-[71px] h-[30px] border-[1px] border-[#000000] dark:border-[#FFFFFF] rounded-[10px]'
             style={{
               boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
             }}
@@ -129,20 +129,24 @@ function Navbar() {
             {darkMode && <Image src={WhiteHiveIcon} alt='WhiteHiveIcon' />}
             {!darkMode && <Image src={BlackHiveIcon} alt='BlackHiveIcon' />}
             {darkMode && (
-              <p className='font-medium text-[15px] text-[#FFFFFF] ml-1'>
-                Hive
-              </p>
+              <Link href='/hive'>
+                <p className='font-medium text-[15px] text-[#FFFFFF] ml-1'>
+                  Hive
+                </p>
+              </Link>
             )}
             {!darkMode && (
-              <p className='font-medium text-[15px] text-[#000000] ml-1'>
-                Hive
-              </p>
+              <Link href='/hive'>
+                <p className='font-medium text-[15px] text-[#000000] ml-1'>
+                  Hive
+                </p>
+              </Link>
             )}
           </div>
 
           {/* QR-section */}
           <div
-            className='flex justify-center items-center w-[55px] h-[30px] border-[1px] border-[#FFFFFF] rounded-[10px]'
+            className='flex justify-center items-center w-[55px] h-[30px] border-[1px] border-[#000000] dark:border-[#FFFFFF] rounded-[10px]'
             style={{
               boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
             }}
@@ -305,5 +309,6 @@ function Navbar() {
 }
 
 export default Navbar
+
 
 

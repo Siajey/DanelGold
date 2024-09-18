@@ -4,16 +4,16 @@
 import LandingHero from '@/components/Landing-Hero-component/LandingHero'
 import LandingPageListComponent from '@/components/LandingPageListComponent/LandingPageListComponent'
 import LandingCollectionCardsSliders from '@/components/LandingCollectionCardsSliders/LandingCollectionCardsSliders'
+import LandingMagazinesSection from '@/components/landing-magazines-section/LandingMagazinesSection'
 
 export default function Home() {
   return (
-    <>
+    <div className='container mx-auto'>
       <LandingHero />
       <LandingPageListComponent />
       <LandingCollectionCardsSliders />
-    </>
+      <LandingMagazinesSection />
+    </div>
   )
 }
-
-
 

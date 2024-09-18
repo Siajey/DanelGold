@@ -32,7 +32,7 @@ function ThemeToggle() {
   }, [darkMode])
   return (
     <div
-      className='flex justify-between items-center w-[65px] h-[30px] border-[1px] border-[#FFFFFF] rounded-[10px] p-2 cursor-pointer'
+      className='flex justify-between items-center w-[65px] h-[30px] border-[1px] border-[#000000] dark:border-[#FFFFFF] rounded-[10px] p-2 cursor-pointer'
       style={{
         boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
       }}

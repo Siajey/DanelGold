@@ -6,33 +6,28 @@ export const HeadingNavigationLinks = [
   },
   {
     id: 2,
-    navName: 'Art',
-    href: '/art',
+    navName: 'Painting',
+    href: '/painting',
   },
   {
     id: 3,
-    navName: 'Gaming',
-    href: '/gaming',
+    navName: 'Sculpture',
+    href: '/sculpture',
   },
   {
     id: 4,
-    navName: 'Membership',
-    href: '/membership',
-  },
-  {
-    id: 5,
-    navName: 'PFPs',
-    href: '/PFPs',
-  },
-  {
-    id: 6,
     navName: 'Photography',
     href: '/photography',
   },
   {
-    id: 7,
-    navName: 'Music',
-    href: '/music',
+    id: 5,
+    navName: 'Memberships',
+    href: '/memberships',
+  },
+  {
+    id: 6,
+    navName: 'PFPs',
+    href: '/pfps',
   },
 ]
 

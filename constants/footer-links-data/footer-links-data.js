@@ -48,12 +48,12 @@ export const FooterCompanyLinks = [
   {
     id: 1,
     LinkName: 'About us',
-    LinkHref: '/',
+    LinkHref: '/about-us',
   },
   {
     id: 2,
     LinkName: 'Careers',
-    LinkHref: '/',
+    LinkHref: '/careers',
   },
 ]
 
@@ -82,6 +82,11 @@ export const FooterMagazineLinks = [
     id: 5,
     LinkName: 'What is web3?',
     LinkHref: '/magazines',
+  },
+  {
+    id: 6,
+    LinkName: 'News',
+    LinkHref: '/news',
   },
 ]
 

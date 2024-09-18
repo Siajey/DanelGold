@@ -1,0 +1,10 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 7.5H3" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M5 2.5H18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M5 12.5H18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 17.5H3" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<circle cx="2.5" cy="2.5" r="2.5" transform="matrix(-1 0 0 1 5 5)" fill="black"/>
+<circle cx="18.5" cy="2.5" r="2.5" fill="black"/>
+<circle cx="18.5" cy="12.5" r="2.5" fill="black"/>
+<circle cx="2.5" cy="2.5" r="2.5" transform="matrix(-1 0 0 1 5 15)" fill="black"/>
+</svg>
