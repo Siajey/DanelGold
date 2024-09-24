@@ -1,8 +1,7 @@
 'use client'
 
+//handle the active links and some other functionality
 import { useState } from 'react'
-
-//handle the active links
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -19,16 +18,15 @@ import { StatsHeadingPaginationLinks } from '../../constants/stats-heading-pagin
 import BlackLargeSearchIcon from '../../public/assets/icons/black-large-search-bar-icon.svg'
 import BlackBurgerMenuIcon from '../../public/assets/icons/black-burger-menu-icon.svg'
 import BlackFlukeIcon from '../../public/assets/icons/black-fluke-icon.svg'
-
-import AccordionArrowUpIcon from '../../public/assets/icons/account-page-accordions-arrow-up-icon.svg'
-import AccordionArrowDownIcon from '../../public/assets/icons/account-page-accordions-arrow-down-icon.svg'
-import SmallBlackArrowDownIcon from '../../public/assets/icons/small-black-arrow-down-icon.svg'
-import BlockChainAccordionIcon1 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-1.svg'
-import BlockChainAccordionIcon2 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-2.svg'
-import BlockChainAccordionIcon3 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-3.svg'
-import BlockChainAccordionIcon4 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-4.svg'
-import BlockChainAccordionIcon5 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-5.svg'
-import BlockChainAccordionIcon6 from '../../public/assets/icons/stats-nft-page-blockchain-accordion-icons-icon-6.svg'
+import BlockchainSmallIcon from '@/public/assets/icons/blockchain-small-white-icon.svg'
+import SmallWhitecheckIcon from '@/public/assets/icons/small-white-check-icon.svg'
+import EthereumIcon from '@/public/assets/icons/small-ethereum-icon.svg'
+import BNBChainIcon from '@/public/assets/icons/small-BNB-chain-icon.svg'
+import KlaytnIcon from '@/public/assets/icons/small-Klaytn-icon.svg'
+import PolygonIcon from '@/public/assets/icons/small-Polygon-icon.svg'
+import ArbitrumIcon from '@/public/assets/icons/small-Arbitrum-icon.svg'
+import AvalancheIcon from '@/public/assets/icons/small-Avalanche-icon.svg'
+import SolanaIcon from '@/public/assets/icons/small-SolanaIcon.svg'
 
 //NFT cards data
 import { StatsNFTCardsData } from '../../constants/stats-nft-cards-data/stats-nft-cards-data.js'
@@ -36,79 +34,8 @@ import { StatsNFTCardsData } from '../../constants/stats-nft-cards-data/stats-nf
 function page() {
   //active links controller using pathname hook
   const pathname = usePathname()
-  //handle the live data toggle button
-  const [toggled, setToggled] = useState()
 
   //accordions controller state and functionality
-  const [isOpen, setIsOpen] = useState(false)
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen)
-  }
-
-  //handle the ETH and WETH checkboxes functionality and styles
-  const [ETHBoxchecked, setETHBoxchecked] = useState(false)
-  const handleETHBoxChange = () => {
-    setETHBoxchecked(!ETHBoxchecked)
-  }
-
-  const [WETHBoxchecked, setWETHBoxchecked] = useState(false)
-  const handleWETHBoxChange = () => {
-    setWETHBoxchecked(!WETHBoxchecked)
-  }
-
-  const checkboxStyle1 = {
-    display: 'inline-block',
-    width: '20px',
-    height: '20px',
-    border: '2px solid #FFFFFF',
-    borderRadius: '4px',
-    position: 'relative',
-    cursor: 'pointer',
-    backgroundColor: ETHBoxchecked ? '#ffcc05' : 'transparent',
-    borderColor: ETHBoxchecked ? '#ffcc05' : '#FFFFFF',
-    transition: 'background-color 0.2s, border-color 0.2s',
-  }
-
-  const checkboxStyle2 = {
-    display: 'inline-block',
-    width: '20px',
-    height: '20px',
-    border: '2px solid #FFFFFF',
-    borderRadius: '4px',
-    position: 'relative',
-    cursor: 'pointer',
-    backgroundColor: WETHBoxchecked ? '#ffcc05' : 'transparent',
-    borderColor: WETHBoxchecked ? '#ffcc05' : '#FFFFFF',
-    transition: 'background-color 0.2s, border-color 0.2s',
-  }
-
-  const checkmarkStyle1 = {
-    content: '""',
-    position: 'absolute',
-    top: '2px',
-    left: '6px',
-    width: '6px',
-    height: '12px',
-    border: 'solid white',
-    borderWidth: '0 2px 2px 0',
-    transform: 'rotate(45deg)',
-    opacity: ETHBoxchecked ? 1 : 0,
-    transition: 'opacity 0.2s',
-  }
-
-  const checkmarkStyle2 = {
-    content: '""',
-    position: 'absolute',
-    top: '2px',
-    left: '6px',
-    width: '6px',
-    height: '12px',
-    border: 'solid white',
-    borderWidth: '0 2px 2px 0',
-    transform: 'rotate(45deg)',
-    opacity: WETHBoxchecked ? 1 : 0,
-    transition: 'opacity 0.2s',
-  }
 
   return (
     <div id='Stats-NFTS-fully-container'>
@@ -200,225 +127,117 @@ function page() {
                 <Image src={BlackBurgerMenuIcon} />
               </button>
             </div>
-
-            {/* live-data-switch(on or off) container this section needs to change the data when the user clicked on it (logic not applied yet!!! -> TODO) */}
-            <div className='flex justify-center items-center gap-5'>
-              <div className='flex justify-center items-center'>
-                <button
-                  className={`toggle-btn ${toggled ? 'toggled' : ''}`}
-                  onClick={() => setToggled(!toggled)}
-                >
-                  <div className='thumb'></div>
-                </button>
-              </div>
-
-              <div className='flex justify-center items-center gap-3'>
-                <p className='font-semibold text-[12px] text-[#b6b5b5] leading-[15px]'>
-                  Live data
-                </p>
-                <div className='w-[5px] h-[5px] bg-[#474747] rounded-[100%]' />
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
       {/* NFT-cards-section & BPT (blockChain-Price-Type) */}
-      <div
-        className=''
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '20vw 80vw',
-        }}
-      >
+      <div className='flex justify-center items-start'>
+        {/*left section of the grid container (accordions) fully-container */}
         {/* BPT-section-container */}
-        <div className='flex flex-col justify-start items-center w-full mt-12'>
-          {/* left section of the grid container (accordions)  */}
-
-          {/* accordion-1 container */}
-          <div className='accordion w-[90%]'>
-            {/* accordion-heading-title-container */}
-            <div className='flex justify-between items-center w-full gap-20'>
-              <div className=''>
-                <button onClick={toggleAccordion} className='accordion-title'>
-                  <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                    Blockchain
-                  </p>
-                </button>
-              </div>
-
-              <div className=''>
-                <Image src={AccordionArrowUpIcon} />
-              </div>
-            </div>
-
-            {isOpen && (
-              <div className='accordion-content'>
-                {/* accordion-content-container */}
-                <div className='flex flex-col justify-center items-center'>
-                  {/* select-blockchain-method-container */}
-                  <div className='relative flex justify-center items-center w-full h-[40px] bg-[#898686] rounded-[10px] gap-6'>
-                    <Image src={BlockChainAccordionIcon1} />
-                    <Image src={BlockChainAccordionIcon2} />
-                    <Image src={BlockChainAccordionIcon3} />
-                    <Image src={BlockChainAccordionIcon4} />
-                    <Image src={BlockChainAccordionIcon5} />
-                    <Image src={BlockChainAccordionIcon6} />
-                  </div>
-                </div>
-              </div>
-            )}
-            <style jsx>{`
-              .accordion-title {
-                cursor: pointer;
-                padding: 10px;
-                width: 100%;
-                text-align: left;
-                border: none;
-                outline: none;
-                transition: background 0.3s;
-              }
-              .accordion-content {
-                padding: 10px;
-              }
-            `}</style>
+        <aside className='flex flex-col justify-start items-start w-[20%] h-[40vh] bg-[#404040] rounded-[5px] mt-12 ml-5 gap-7'>
+          {/* Blockchain-section */}
+          <div className='flex justify-start items-center w-[70%] bg-white pl-3 mt-5 ml-5 rounded-[5px] p-[10px]'>
+            <Image src={BlockchainSmallIcon} />
+            <p className='font-semibold text-[15px leading-[20px] ml-3'>
+              Blockchain
+            </p>
           </div>
 
-          {/* accordion-2 container */}
-          <div className='accordion w-[90%] mt-3'>
-            {/* accordion-heading-title-container */}
-            <div className='flex justify-between items-center w-full gap-20'>
-              <div className=''>
-                <button onClick={toggleAccordion} className='accordion-title'>
-                  <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                    Price
-                  </p>
-                </button>
-              </div>
-
-              <div className=''>
-                <Image src={AccordionArrowUpIcon} />
-              </div>
-            </div>
-
-            {isOpen && (
-              <div className='accordion-content'>
-                {/* accordion-content-container */}
-                <div className='flex flex-col justify-center items-center'>
-                  {/* min-max-ETH-selector-container */}
-                  <div className='flex justify-start items-center w-full gap-5 ml-5'>
-                    {/* box-1 */}
-                    <div className='flex justify-center items-center w-[70px] h-[40px] bg-[#898686] rounded-[10px]'>
-                      <button className=''>
-                        <p className='font-semibold text-[15px] text-[#000000] leading-[20px]'>
-                          Min
-                        </p>
-                      </button>
-                    </div>
-                    {/* box2 */}
-                    <div className='flex justify-center items-center w-[70px] h-[40px] bg-[#898686] rounded-[10px]'>
-                      <button className=''>
-                        <p className='font-semibold text-[15px] text-[#000000] leading-[20px]'>
-                          Max
-                        </p>
-                      </button>
-                    </div>
-                    {/* box-3 */}
-                    <div className='flex justify-center items-center w-[70px] h-[40px] bg-[#898686] rounded-[10px]'>
-                      <button className=''>
-                        <p className='font-semibold text-[15px] text-[#000000] leading-[20px]'>
-                          ETH
-                        </p>
-                      </button>
-                      <Image src={SmallBlackArrowDownIcon} className='ml-2' />
-                    </div>
-                  </div>
-
-                  {/* apply-button-container */}
-                  <div className='relative flex justify-center items-center w-[95%] h-[40px] bg-[#898686] rounded-[10px] gap-4 mt-3'>
-                    <button>
-                      <p className='font-semibold text-[15px] text-[#000000] leading-[20px]'>
-                        Apply
-                      </p>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-            <style jsx>{`
-              .accordion-title {
-                cursor: pointer;
-                padding: 10px;
-                width: 100%;
-                text-align: left;
-                border: none;
-                outline: none;
-                transition: background 0.3s;
-              }
-              .accordion-content {
-              }
-            `}</style>
+          {/* Price-section */}
+          <div className='flex justify-start items-center w-[70%] bg-white pl-3 ml-5 rounded-[5px] p-[10px]'>
+            <Image src={BlockchainSmallIcon} />
+            <p className='font-semibold text-[15px leading-[20px] ml-3'>
+              Price
+            </p>
           </div>
 
-          {/* accordion-3 container */}
-          <div className='accordion w-[90%] mt-3'>
-            {/* accordion-heading-title-container */}
-            <div className='flex justify-between items-center w-full gap-20'>
-              <div className=''>
-                <button onClick={toggleAccordion} className='accordion-title'>
-                  <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                    Type
-                  </p>
-                </button>
-              </div>
+          {/* Type-section */}
+          <div className='flex justify-start items-center w-[70%] bg-white pl-3 ml-5 rounded-[5px] p-[10px]'>
+            <Image src={BlockchainSmallIcon} />
+            <p className='font-semibold text-[15px leading-[20px] ml-3'>Type</p>
+          </div>
 
-              <div className=''>
-                <Image src={AccordionArrowUpIcon} />
+          {/* save-button-section */}
+          <div className='flex justify-center items-center ml-5'>
+            <button className=''>
+              <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px] border border-[#FFFFFF] rounded-[7px] px-4'>
+                Save
+              </p>
+            </button>
+          </div>
+
+          {/* second-section (dynamic-result-box) */}
+          <div className='flex flex-col justify-start items-start w-full bg-[#404040] rounded-[5px] border-t'>
+            {/* selected-top-heading-text */}
+            <p className='font-semibold text-[20px] text-[#FFFFFF] leading-[25px] mt-5 ml-5'>
+              Blockchain
+            </p>
+
+            {/* blockchain-methods-and-icons-box */}
+            <div className='flex flex-col justify-center items-center mt-7 ml-3 gap-5 pb-3'>
+              {/* method-1*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={EthereumIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Ethereum
+                </p>
+                <Image src={SmallWhitecheckIcon} />
+              </div>
+              {/* method-2*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={BNBChainIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  BNB Chain
+                </p>
+                <Image src={SmallWhitecheckIcon} />
+              </div>
+              {/* method-3*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={KlaytnIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Klaytn
+                </p>
+                <Image src={SmallWhitecheckIcon} />
+              </div>
+              {/* method-4*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={PolygonIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Polygon
+                </p>
+                <Image src={SmallWhitecheckIcon} />
+              </div>
+              {/* method-5*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={ArbitrumIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Arbitrum
+                </p>
+                <Image src={AbortController} />
+              </div>
+              {/* method-6*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={AvalancheIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Avalanche
+                </p>
+                <Image src={SmallWhitecheckIcon} />
+              </div>
+              {/* method-7*/}
+              <div className='flex justify-between items-center w-full'>
+                <Image src={SolanaIcon} className='me-4' />
+                <p className='font-medium text-[15px] text-[#FFFFFF] leading-[15px] me-8'>
+                  Solana
+                </p>
+                <Image src={SmallWhitecheckIcon} />
               </div>
             </div>
-
-            {isOpen && (
-              <div className='accordion-content'>
-                {/* accordion-content-container */}
-                <div className='flex justify-center items-center gap-2'>
-                  <button className='flex justify-center items-center p-4 h-[25px] bg-[#474747] rounded-[10px]'>
-                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
-                      All
-                    </p>
-                  </button>
-
-                  <button className='flex justify-center items-center p-4 h-[25px] bg-[#8e8a8a] rounded-[10px]'>
-                    <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
-                      Multiple edition
-                    </p>
-                  </button>
-
-                  <button className='flex justify-center items-center p-4 h-[25px] bg-[#8e8a8a] rounded-[10px]'>
-                    <p className='font-semibold text-[12px] text-[#000000] leading-[15px]'>
-                      Single edition
-                    </p>
-                  </button>
-                </div>
-              </div>
-            )}
-            <style jsx>{`
-              .accordion-title {
-                cursor: pointer;
-                padding: 10px;
-                width: 100%;
-                text-align: left;
-                border: none;
-                outline: none;
-                transition: background 0.3s;
-              }
-              .accordion-content {
-              }
-            `}</style>
           </div>
-        </div>
+        </aside>
 
         {/* cards-section */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  mt-7'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-[80%] mt-7 ml-5 gap-5'>
           {StatsNFTCardsData.map((card) => (
             <div className=''>
               <div
@@ -472,3 +291,4 @@ function page() {
 }
 
 export default page
+
