@@ -12,7 +12,7 @@ function page() {
         style={{
           display: 'grid',
           gridTemplateColumns: '15vw 85vw',
-          gap:'2rem',
+          gap: '2rem',
           marginTop: '3rem',
         }}
       >
@@ -136,8 +136,19 @@ function page() {
         </div>
 
         {/* right-side-result-box */}
-        <div className='flex justify-center items-center bg-[#474747] rounded-[10px]'>
-s
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '10vw 90vw',
+            backgroundColor: '#474747',
+            borderRadius: '10px',
+          }}
+        >
+          {/* left-side-menu*/}
+          <div className='flex flex-col justify-center items-center border'>ss</div>
+
+          {/* right-side-menu */}
+          <div className='flex flex-col justify-center items-center border'>sss</div>
         </div>
       </div>
     </div>
@@ -145,5 +156,4 @@ s
 }
 
 export default page
-
 
