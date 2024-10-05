@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react";
 
 //assets and components for this component
-import CareersPageFAQAccordion from '../CareersPageAccordion-component/CareersPageAccordion'
+import CareersPageFAQAccordion from "../CareersPageAccordion-component/CareersPageAccordion";
 
 function CareersPageFAQ() {
   // this part calculates the last item in the accordions to be able to remove the border bottom from the last item in the accordions in accordion component
   const faqItems = [
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Be a futurist
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -26,12 +26,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Dive deep
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -41,12 +41,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Earn trust
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -56,12 +56,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Build an ocean, not an aquarium
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -71,12 +71,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Take the helm
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -86,12 +86,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Today, not tomorrow
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -101,12 +101,12 @@ function CareersPageFAQ() {
     },
     {
       title: (
-        <p className='font-bold text-[15px] text-[#FFFFFF] leading-[20px]'>
+        <p className="font-bold text-[15px] text-gray-700 dark:text-white leading-[20px]">
           Create a shared digital consciousness
         </p>
       ),
       answer: (
-        <p className='font-medium text-[12px] text-[#FFFFFF] leading-[15px] opacity-80'>
+        <p className="font-medium text-[12px] text-gray-700 dark:text-white leading-[15px] opacity-80">
           Reprehenderit cupidatat deserunt velit sunt ipsum enim duis minim.
           Mollit aliqua duis fugiat dolore ullamco nulla pariatur cillum tempor
           sunt nostrud. Voluptate enim aliquip adipisicing esse et anim
@@ -114,10 +114,10 @@ function CareersPageFAQ() {
         </p>
       ),
     },
-  ]
+  ];
 
   return (
-    <div className='bg-[#474747] rounded-lg'>
+    <div className="bg-[#474747] rounded-lg">
       {faqItems.map((item, index) => (
         <CareersPageFAQAccordion
           key={index}
@@ -127,8 +127,7 @@ function CareersPageFAQ() {
         />
       ))}
     </div>
-  )
+  );
 }
 
-export default CareersPageFAQ
-
+export default CareersPageFAQ;
