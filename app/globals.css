@@ -27,3 +27,8 @@ body {
   }
 }
 
+.embla__slide {
+  flex: 0 0 auto !important; /* Adapt slide size to its content */
+  min-width: 0 !important;
+  max-width: 100% !important; /* Prevent from growing larger than viewport */
+}

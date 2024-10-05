@@ -3,7 +3,7 @@ import './globals.css'
 
 //navbar and footer layout
 import Navbar from '@/components/Navbar-component/Navbar'
-import Footer from '@/components/Footer-Component/Footer'
+// import Footer from '@/components/Footer-Component/Footer'
 
 //context data import
 import { MyProvider } from '@/context/MyContext'
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <MyProvider>
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </MyProvider>
       </body>
     </html>
