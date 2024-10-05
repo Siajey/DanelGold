@@ -15,9 +15,11 @@ import UserProfilePicture from '../../public/assets/images/account-page-user-pro
 //import HGFrame from '@/components/HG-Frame/HGFrame.jsx'
 import ShareButtonIcon from '../../public/assets/icons/account-page-share-button-icon.svg'
 import MoreButtonIcon from '../../public/assets/icons/account-page-more-button-icon.svg'
-import AccordionArrowUpIcon from '../../public/assets/icons/account-page-accordions-arrow-up-icon.svg'
-import AccordionArrowDownIcon from '../../public/assets/icons/account-page-accordions-arrow-down-icon.svg'
-import AccordionSearchIcon from '../../public/assets/icons/account-accordions-gray-small-search-icon.svg'
+
+import CollectionsIcon from '@/public/assets/icons/account-page-collections-icon.svg'
+import EventTypeIcon from '@/public/assets/icons/account-page-event-type-icon.svg'
+import ChainsIcon from '@/public/assets/icons/account-page-chains-icon.svg'
+import SmallWhiteCheckIcon from '@/public/assets/icons/account-page-small-white-select-check-icon.svg'
 
 function page() {
   //active links controller for this page
@@ -106,7 +108,7 @@ function page() {
  */
 
   return (
-    <div id='user-account-page-fully-container'>
+    <div id='user-account-page-fully-container' className=''>
       {/* hero-section for this page */}
       <div className='w-full mt-10 relative'>
         <Image className='w-full' src={HeroSectionSeaBgImage} />
@@ -141,7 +143,7 @@ function page() {
         {/* name-shareButton-moreButton container */}
         <div className='flex justify-between items-center w-[95vw] mt-10'>
           {/* user-name container */}
-          <div className='flex justify-center items-center'>
+          <div className='flex justify-center items-center mt-5'>
             <p className='font-semibold text-[20px] text-[#b9b7b7] leading-[25px]'>
               Name
             </p>
@@ -153,8 +155,6 @@ function page() {
             </button>
 
             <button className='flex justify-center items-center w-[35px] h-[35px] bg-[#8c8888] rounded-[10px] gap-1'>
-              <Image src={MoreButtonIcon} />
-              <Image src={MoreButtonIcon} />
               <Image src={MoreButtonIcon} />
             </button>
           </div>
@@ -199,246 +199,140 @@ function page() {
             width: '100vw',
           }}
         >
-          {/* left section of the grid container (accordions)  */}
-          <div>
-            {/* accordion-1 container */}
-            <div className='accordion w-[90%]'>
-              {/* accordion-heading-title-container */}
-              <div className='flex justify-between items-center w-full pl-16 pr-10 mt-2'>
-                <div className=''>
-                  <button onClick={toggleAccordion} className='accordion-title'>
-                    <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                      Collections
-                    </p>
-                  </button>
+          {/* left section of the grid container (item-selection-menu)  */}
+          <div className='flex flex-col items-center bg-[#474747] rounded-[10px] px-5 py-5 gap-5'>
+            {/* item-1 */}
+            <div className='flex justify-start items-start w-full'>
+              <button className='flex justify-center items-center gap-3'>
+                <div className='flex justify-center items-center w-8 h-8 bg-[#c8c8c8] rounded-full'>
+                  <Image src={CollectionsIcon} />
                 </div>
 
-                <div className=''>
-                  <Image src={AccordionArrowUpIcon} />
+                <div className='flex justify-center items-center'>
+                  <p className='font-semibold text-[15px] text-[#000000] leading-[20px]'>
+                    Collections
+                  </p>
                 </div>
-              </div>
-              {isOpen && (
-                <div className='accordion-content'>
-                  {/* accordion-content-container */}
-                  <div className='flex flex-col justify-center items-center'>
-                    {/* search-input-container */}
-                    <div className='relative flex justify-center items-center w-[75%] ml-10'>
-                      <input
-                        typeof='search'
-                        className='flex justify-center items-center pl-7 w-full h-[30px] text-white bg-transparent border border-[#FFFFFF] rounded-[10px] placeholder:font-semibold placeholder:text-[12px] placeholder:leading-[15px]'
-                        style={{
-                          boxShadow: '0px 2px 4px 2px rgba(0, 0, 0, 0.25)',
-                        }}
-                        placeholder='Search'
-                      />
-
-                      <div className='absolute inset-y-0 left-2 flex items-center'>
-                        <Image src={AccordionSearchIcon} />
-                      </div>
-                    </div>
-
-                    {/* texts */}
-                    <div className='flex justify-between items-center w-[75%] ml-10 mt-5'>
-                      <p className='font-semibold text-[12px] text-[#bcb9b9] leading-[15px]'>
-                        COLLECTION
-                      </p>
-                      <p className='font-semibold text-[12px] text-[#bcb9b9] leading-[15px]'>
-                        VALUE
-                      </p>
-                    </div>
-
-                    {/* HR-bottom-line */}
-                    <div className='w-[75%] border opacity-20 ml-10 mt-5 ' />
-                  </div>
-                </div>
-              )}
-              <style jsx>{`
-                .accordion-title {
-                  cursor: pointer;
-                  padding: 10px;
-                  width: 100%;
-                  text-align: left;
-                  border: none;
-                  outline: none;
-                  transition: background 0.3s;
-                }
-                .accordion-content {
-                  padding: 10px;
-                }
-              `}</style>
+              </button>
             </div>
 
-            {/* accordion-2 container */}
-            <div className='accordion w-[90%]'>
-              {/* accordion-heading-title-container */}
-              <div className='flex justify-between items-center w-full pl-16 pr-10 mt-2'>
-                <div className=''>
-                  <button onClick={toggleAccordion} className='accordion-title'>
-                    <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                      Price
-                    </p>
-                  </button>
+            {/* item-2 */}
+            <div className='flex justify-start items-start w-full'>
+              <button className='flex justify-center items-center gap-3'>
+                <div className='flex justify-center items-center w-8 h-8 bg-[#c8c8c8] rounded-full'>
+                  <Image src={EventTypeIcon} />
                 </div>
 
-                <div className=''>
-                  <Image src={AccordionArrowUpIcon} />
+                <div className='flex justify-center items-center'>
+                  <p className='font-semibold text-[15px] text-[#c6c6c6] leading-[20px]'>
+                    Event Type
+                  </p>
                 </div>
-              </div>
-              {isOpen && (
-                <div className='accordion-content'>
-                  {/* accordion-content-container */}
-                  <div className='flex flex-col justify-center items-center'>
-                    {/* search-input-container */}
-                    <div className='flex justify-between items-center w-[75%] h-[30px] border rounded-[10px] ml-10 p-2'>
-                      <div>
-                        <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                          USD
-                        </p>
-                      </div>
-
-                      <div>
-                        <Image src={AccordionArrowDownIcon} />
-                      </div>
-                    </div>
-
-                    {/* min to max  */}
-                    <div className='flex justify-between items-center w-[75%] ml-10 mt-5'>
-                      <div className='flex justify-center items-center w-[37%] h-[30px] border rounded-[10px] p-2'>
-                        <p className='font-semibold text-[12px] text-[#bcb9b9] leading-[15px]'>
-                          Min
-                        </p>
-                      </div>
-
-                      <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
-                        TO
-                      </p>
-
-                      <div className='flex justify-center items-center w-[37%] h-[30px] border rounded-[10px] p-2'>
-                        <p className='font-semibold text-[12px] text-[#bcb9b9] leading-[15px]'>
-                          Max
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Apply-button-section */}
-                    <div className='w-[75%] mt-3 ml-10'>
-                      <button className='flex justify-center items-center w-full h-[30px] bg-[#BEBBBB] rounded-[10px] '>
-                        <p className='font-semibold text-[15px] text-[#5f5d5d] leading-[20px]'>
-                          Apply
-                        </p>
-                      </button>
-                    </div>
-
-                    {/* HR-bottom-line */}
-                    <div className='w-[75%] border opacity-20 ml-10 mt-5 ' />
-                  </div>
-                </div>
-              )}
-              <style jsx>{`
-                .accordion-title {
-                  cursor: pointer;
-                  padding: 10px;
-                  width: 100%;
-                  text-align: left;
-                  border: none;
-                  outline: none;
-                  transition: background 0.3s;
-                }
-                .accordion-content {
-                  padding: 10px;
-                }
-              `}</style>
+              </button>
             </div>
 
-            {/* accordion-3 container */}
-            <div className='accordion w-[90%]'>
-              {/* accordion-heading-title-container */}
-              <div className='flex justify-between items-center w-full pl-16 pr-10 mt-2'>
-                <div className=''>
-                  <button onClick={toggleAccordion} className='accordion-title'>
-                    <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                      Currency
+            {/* item-3 */}
+            <div className='flex justify-start items-start w-full'>
+              <button className='flex justify-center items-center gap-3'>
+                <div className='flex justify-center items-center w-8 h-8 bg-[#c8c8c8] rounded-full'>
+                  <Image src={ChainsIcon} />
+                </div>
+
+                <div className='flex justify-center items-center'>
+                  <p className='font-semibold text-[15px] text-[#c6c6c6] leading-[20px]'>
+                    Chains
+                  </p>
+                </div>
+              </button>
+            </div>
+
+            {/* second-section of this select item menu */}
+            <div className='flex flex-col justify-start items-start w-full border-t rounded-[10px] mt-5'>
+              {/* top-heading-text */}
+              <p className='font-semibold text-[20px] text-[#FFFFFF] leading-[25px] mt-5'>
+                Collections
+              </p>
+
+              {/* collections-items */}
+              <div className='flex flex-col justify-between items-center w-full mt-5 gap-7'>
+                {/* item-1 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      All
                     </p>
                   </button>
-                </div>
 
-                <div className=''>
-                  <Image src={AccordionArrowUpIcon} />
-                </div>
-              </div>
-              {isOpen && (
-                <div className='accordion-content'>
-                  {/* accordion-content-container */}
-                  <div className='flex flex-col justify-center items-center'>
-                    {/* search-input-container */}
-                    <div className='relative flex justify-center items-center w-[75%] ml-10'>
-                      <input
-                        typeof='search'
-                        className='flex justify-center items-center pl-7 w-full h-[30px] text-white bg-transparent border border-[#FFFFFF] rounded-[10px] placeholder:font-semibold placeholder:text-[12px] placeholder:leading-[15px]'
-                        style={{
-                          boxShadow: '0px 2px 4px 2px rgba(0, 0, 0, 0.25)',
-                        }}
-                        placeholder='Search'
-                      />
-
-                      <div className='absolute inset-y-0 left-2 flex items-center'>
-                        <Image src={AccordionSearchIcon} />
-                      </div>
-                    </div>
-
-                    {/* ETH-WETH-section-container */}
-                    <div className='flex flex-col justify-start items-start w-[75%] ml-10 mt-5'>
-                      <label className='flex items-center'>
-                        <input
-                          type='checkbox'
-                          checked={ETHBoxchecked}
-                          onChange={handleETHBoxChange}
-                          style={{ display: 'none' }}
-                        />
-                        <span style={checkboxStyle1}>
-                          <span style={checkmarkStyle1}></span>
-                        </span>
-                        <span style={{ marginLeft: '8px' }}>
-                          <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                            ETH
-                          </p>
-                        </span>
-                      </label>
-
-                      <label className='flex items-center mt-5'>
-                        <input
-                          type='checkbox'
-                          checked={WETHBoxchecked}
-                          onChange={handleWETHBoxChange}
-                          style={{ display: 'none' }}
-                        />
-                        <span style={checkboxStyle2}>
-                          <span style={checkmarkStyle2}></span>
-                        </span>
-                        <span style={{ marginLeft: '8px' }}>
-                          <p className='font-semibold text-[15px] text-[#FFFFFF] leading-[20px]'>
-                            WETH
-                          </p>
-                        </span>
-                      </label>
-                    </div>
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
                   </div>
                 </div>
-              )}
-              <style jsx>{`
-                .accordion-title {
-                  cursor: pointer;
-                  padding: 10px;
-                  width: 100%;
-                  text-align: left;
-                  border: none;
-                  outline: none;
-                  transition: background 1.3s;
-                }
-                .accordion-content {
-                  padding: 10px;
-                }
-              `}</style>
+
+                {/* item-2 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      PFPs
+                    </p>
+                  </button>
+
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
+                  </div>
+                </div>
+
+                {/* item-3 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      Painting
+                    </p>
+                  </button>
+
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
+                  </div>
+                </div>
+
+                {/* item-4 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      Sculpture
+                    </p>
+                  </button>
+
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
+                  </div>
+                </div>
+
+                {/* item-5 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      Photography
+                    </p>
+                  </button>
+
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
+                  </div>
+                </div>
+
+                {/* item-6 */}
+                <div className='flex justify-between items-center w-full'>
+                  <button className='flex justify-center items-center'>
+                    <p className='font-semibold text-[12px] text-[#FFFFFF] leading-[15px]'>
+                      Memberships
+                    </p>
+                  </button>
+
+                  <div className='flex justify-center items-center'>
+                    <Image src={SmallWhiteCheckIcon} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -470,5 +364,6 @@ function page() {
 }
 
 export default page
+
 
 
